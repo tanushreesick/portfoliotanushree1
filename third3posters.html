@@ -1,0 +1,154 @@
+<html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misc. Illustrations Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .info-section {
+            padding-top: 20px;
+        }
+
+        .number {
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: #ff3333;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            border: 1px solid #c3b2b2;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: auto;
+            perspective: 1000px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            transform-style: preserve-3d;
+            animation: flip360 1.5s ease;
+            backface-visibility: visible;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        @keyframes flip360 {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* Add sequential delays for each image */
+        .gallery-item:nth-child(1) img { animation-delay: 0s; }
+        .gallery-item:nth-child(2) img { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) img { animation-delay: 0.4s; }
+        .gallery-item:nth-child(4) img { animation-delay: 0.6s; }
+        .gallery-item:nth-child(5) img { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Add this near the top of your container div, perhaps after the info-section -->
+<div style="position: fixed; top: 20px; left: 20px;">
+    <a href="index.html" style="
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    ">
+        ← 
+    </a>
+</div>
+    <div class="container">
+        <div class="info-section">
+            <div class="number">04</div>
+            <h1 class="title">Graphic<br>posters<br></h1>
+            <div class="tags">
+                <span class="tag">Illustrations</span>
+                
+            </div>
+            <p class="description">
+                My sketches are like uninvited guests at a party—random, unpredictable, but oddly charming. Each one comes with its own quirks and stories, making paper feel less lonely!<br>
+               <br>
+               
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="img\post 1.jpg" alt="Illustration 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img\post 1 (2).jpg" alt="Illustration 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img\post 3.jpg" alt="Illustration 3">
+            </div>
+            <div class="gallery-item">
+                <img src="img\post 4.jpg" alt="Illustration 4">
+            </div>
+            <div class="gallery-item">
+                <img src="img\post 5.jpg" alt="Illustration 5">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

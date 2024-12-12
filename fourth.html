@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Works Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff9f2;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+            position: relative;
+        }
+
+        .gallery-section {
+            background-color: #b38989;
+            border-radius: 0 300px 0 0;
+            padding: 40px;
+            position: relative;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform-style: preserve-3d;
+            animation: flip360 1s ease;
+        }
+
+        .info-section {
+            padding-top: 60px;
+        }
+
+        .number {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .title {
+            color: #ff3333;
+            font-size: 32px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .tag::before {
+            content: "";
+            width: 16px;
+            height: 1px;
+            background-color: #fff9f9;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 300px;
+        }
+
+        .link {
+            color: #666;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .year {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-section {
+                border-radius: 0 150px 0 0;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .number {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @keyframes flip360 {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* Sequential delays for each image */
+        .gallery-item:nth-child(1) img { animation-delay: 0s; }
+        .gallery-item:nth-child(2) img { animation-delay: 0.1s; }
+        .gallery-item:nth-child(3) img { animation-delay: 0.2s; }
+        .gallery-item:nth-child(4) img { animation-delay: 0.3s; }
+        .gallery-item:nth-child(5) img { animation-delay: 0.4s; }
+        .gallery-item:nth-child(6) img { animation-delay: 0.5s; }
+        .gallery-item:nth-child(7) img { animation-delay: 0.6s; }
+        .gallery-item:nth-child(8) img { animation-delay: 0.7s; }
+        .gallery-item:nth-child(9) img { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Add this near the top of your container div, perhaps after the info-section -->
+<div style="position: fixed; top: 20px; left: 20px;">
+    <a href="index.html" style="
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    ">
+        ← 
+    </a>
+</div>
+    <div class="container">
+        <div class="gallery-section">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img\sketch2.jpg" alt="Storyboard frame 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\photo 2.jpg" alt="Storyboard frame 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\photo1.jpg" alt="Storyboard frame 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\sketch 4.jpg" alt="Storyboard frame 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\pic 5.jpg" alt="Storyboard frame 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\pic 4.jpg" alt="Storyboard frame 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\pic 3.jpg" alt="Storyboard frame 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\pic 2.jpg" alt="Storyboard frame 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="img\pic1.jpg" alt="Storyboard frame 9">
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="number">05</div>
+            <h1 class="title">Sketches<br></h1>
+            <div class="tags">
+                <span class="tag">Pencil sketches</span>
+                <span class="tag"></span>
+                <span class="tag"></span>
+            </div>
+            <div class="description">
+                <p>My habit of sketching imaginary charachters.</p>
+                <p>carrying my diary of sketchbookk everywhere </p>
+            </div>
+            <div class="year"></div>
+        </div>
+    </div>
+</body>
+</html>

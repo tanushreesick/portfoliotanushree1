@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Design Portfolio</title>
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff9f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            position: relative;
+        }
+
+        .gallery-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: #fff9f2;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: all 0.8s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .gallery-item img.flipped {
+            transform: rotateY(360deg) scale(1.2);
+            z-index: 100;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .info-section {
+            padding-top: 60px;
+        }
+
+        .number {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .title {
+            color: #ff3333;
+            font-size: 32px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 300px;
+        }
+
+        .year {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 90;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-section {
+                grid-template-columns: 1fr;
+            }
+
+            .number {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        <style>
+    .gallery-item img {
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+</style>
+    </style>
+</head>
+<body>
+    <!-- Add this near the top of your container div, perhaps after the info-section -->
+<div style="position: fixed; top: 20px; left: 20px;">
+    <a href="index.html" 
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    ">
+        ← 
+    </a>
+</div>
+    <div class="container">
+        <div class="gallery-section">
+            <div class="gallery-item">
+                <img src="img\front pg.png" alt="Character expressions and poses">
+            </div>
+            <div class="gallery-item">
+                <img src="img\back cover .png" alt="Storybook spread mockup">
+            </div>
+            <div class="gallery-item">
+                <img src="img\pg6.png" alt="Character design variations">
+            </div>
+            <div class="gallery-item">
+                <img src="img\pg7.png" alt="Character design variations">
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="number">02</div>
+            <h1 class="title">Book<br>Design</h1>
+            <div class="tags">
+                <span class="tag">Illustration</span>
+                <span class="tag">Visual art</span>
+            </div>
+            <div class="description">
+                This illustrated booklet is a vibrant and quirky exploration of my journey as a communication design student, filled with humorous anecdotes and playful visuals. It captures my passion for creativity and storytelling while reflecting my unique perspective on life. The illustrations bring my world to life, offering a delightful peek into the designer behind the designs.
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
